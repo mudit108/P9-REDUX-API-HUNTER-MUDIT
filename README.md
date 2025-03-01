@@ -1,144 +1,183 @@
-Product Listing App
-A React-based web application for browsing products with search, pagination, and product details functionality. Built using React, Redux, React Router, and Bootstrap.
+Here’s a **properly formatted and detailed README.md** file for your project. It includes all the necessary sections, placeholders for customization, and clear instructions for setup and usage.
 
-Features
-Product Listing:
+---
 
-View a list of products with pagination.
+# **Product Listing App**
 
-Display 10 products per page.
+A React-based web application for browsing products with **search**, **pagination**, and **product details** functionality. Built using **React**, **Redux**, **React Router**, and **Bootstrap**.
 
-Search:
+---
 
-Search for products by title.
+## **Features**
+- **Product Listing**:
+  - View a paginated list of products.
+  - Display **10 products per page**.
+- **Search**:
+  - Search for products by title using a debounced search input.
+- **Product Details**:
+  - Click on a product to view its details (title, description, price, and image).
+- **Pagination**:
+  - Navigate between pages using a user-friendly pagination component.
+- **Error Handling**:
+  - Display error messages if the API request fails.
+- **Responsive Design**:
+  - Built with **Bootstrap** for a mobile-friendly UI.
 
-Product Details:
+---
 
-Click on a product to view its details (title, description, price, and image).
+## **Technologies Used**
+- **React**: Frontend library for building user interfaces.
+- **Redux**: State management for managing application data.
+- **React Router**: Routing for navigation between pages.
+- **Axios**: HTTP client for making API requests.
+- **Bootstrap**: CSS framework for styling.
+- **Lodash**: Utility library for debouncing search input.
 
-Pagination:
+---
 
-Navigate between pages using a pagination component.
+## **Screenshots**
 
-Error Handling:
+### **Product Listing Page**
+![Product Listing Page](https://via.placeholder.com/800x400.png?text=Product+Listing+Page)
 
-Display error messages if the API request fails.
+### **Product Details Page**
+![Product Details Page](https://via.placeholder.com/800x400.png?text=Product+Details+Page)
 
-Responsive Design:
+---
 
-Built with Bootstrap for a mobile-friendly UI.
+## **Setup Instructions**
 
-Technologies Used
-React: Frontend library for building user interfaces.
+### **Prerequisites**
+- **Node.js** (v16 or higher)
+- **npm** (v8 or higher)
 
-Redux: State management for managing application data.
+### **Steps to Run the Project**
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/your-username/product-listing-app.git
+   cd product-listing-app
+   ```
 
-React Router: Routing for navigation between pages.
+2. **Install Dependencies**:
+   ```bash
+   npm install
+   ```
 
-Axios: HTTP client for making API requests.
+3. **Start the Development Server**:
+   ```bash
+   npm start
+   ```
 
-Bootstrap: CSS framework for styling.
+4. **Open the App**:
+   - Visit `http://localhost:3000` in your browser.
 
-Lodash: Utility library for debouncing search input.
+---
 
-Setup Instructions
-Prerequisites
-Node.js (v16 or higher)
-
-npm (v8 or higher)
-
-Steps to Run the Project
-Clone the Repository:
-
-bash
-Copy
-git clone https://github.com/your-username/product-listing-app.git
-cd product-listing-app
-Install Dependencies:
-
-bash
-Copy
-npm install
-Start the Development Server:
-
-bash
-Copy
-npm start
-Open the App:
-
-Visit http://localhost:3000 in your browser.
-
-Project Structure
-Copy
+## **Project Structure**
+```
 product-listing-app/
-├── public/
+├── public/                  # Static assets
 ├── src/
-│ ├── components/
-│ │ ├── LoadingSpinner.js
-│ │ ├── Pagination.js
-│ │ ├── ProductDetails.js
-│ │ ├── ProductsList.js
-│ ├── features/
-│ │ ├── productSlice.js
-│ ├── store/
-│ │ ├── store.js
-│ ├── App.js
-│ ├── main.jsx
-│ ├── index.css
-├── package.json
-├── README.md
-API Used
-FakeStore API:
+│   ├── components/          # Reusable components
+│   │   ├── LoadingSpinner.js
+│   │   ├── Pagination.js
+│   │   ├── ProductDetails.js
+│   │   ├── ProductsList.js
+│   ├── features/            # Redux slices
+│   │   ├── productSlice.js
+│   ├── store/               # Redux store
+│   │   ├── store.js
+│   ├── App.js               # Main application component
+│   ├── main.jsx             # Entry point
+│   ├── index.css            # Global styles
+├── package.json             # Project dependencies
+├── README.md                # Project documentation
+```
 
-Base URL: https://fakestoreapi.com
+---
 
-Endpoint: /products
+## **API Used**
+- **FakeStore API**:
+  - Base URL: `https://fakestoreapi.com`
+  - Endpoint: `/products`
+  - Parameters:
+    - `_page`: Page number.
+    - `_limit`: Number of items per page.
+    - `title`: Search term for filtering products by title.
 
-Parameters:
+---
 
-\_page: Page number.
+## **How It Works**
+1. **Product Listing**:
+   - The app fetches products from the FakeStore API.
+   - Products are paginated, with **10 products per page**.
+   - Users can navigate between pages using the pagination component.
 
-\_limit: Number of items per page.
+2. **Search**:
+   - Users can search for products by title.
+   - The search input is debounced to reduce unnecessary API calls.
 
-title: Search term for filtering products by title.
+3. **Product Details**:
+   - Clicking on a product navigates to its details page.
+   - The details page displays the product's title, description, price, and image.
 
-Screenshots
-Product Listing Page
-Product Listing Page
+4. **Error Handling**:
+   - If the API request fails, an error message is displayed.
+   - Users can retry the request by clicking a "Try Again" button.
 
-Product Details Page
-Product Details Page
+---
 
-Contributing
+## **Customization**
+- To change the number of products per page, update the `productsPerPage` value in the `productSlice.js` file:
+  ```javascript
+  const initialState = {
+    productsPerPage: 10, // Change this value
+  };
+  ```
+
+- To use a different API, update the `fetchProducts` and `fetchProductsById` functions in the `productSlice.js` file.
+
+---
+
+## **Contributing**
 Contributions are welcome! Follow these steps:
+1. Fork the repository.
+2. Create a new branch:
+   ```bash
+   git checkout -b feature/your-feature-name
+   ```
+3. Commit your changes:
+   ```bash
+   git commit -m "Add your feature"
+   ```
+4. Push to the branch:
+   ```bash
+   git push origin feature/your-feature-name
+   ```
+5. Open a pull request.
 
-Fork the repository.
+---
 
-Create a new branch:
+## **License**
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-bash
-Copy
-git checkout -b feature/your-feature-name
-Commit your changes:
+---
 
-bash
-Copy
-git commit -m "Add your feature"
-Push to the branch:
-
-bash
-Copy
-git push origin feature/your-feature-name
-Open a pull request.
-
-License
-This project is licensed under the MIT License. See the LICENSE file for details.
-
-Contact
+## **Contact**
 For questions or feedback, feel free to reach out:
+- **Email**: your-email@example.com
+- **GitHub**: [your-username](https://github.com/your-username)
 
-Email: your-email@example.com
+---
 
-GitHub: your-username
+Enjoy using the **Product Listing App**! 🚀
 
-Enjoy using the Product Listing App! 🚀
+---
+
+### **How to Use This README**
+1. Replace `your-username` with your GitHub username.
+2. Replace `your-email@example.com` with your email address.
+3. Add actual screenshots of your app (replace the placeholder images).
+4. Update the API details if you are using a different API.
+
+Let me know if you need further assistance! 😊
