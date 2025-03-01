@@ -9,6 +9,7 @@ A React-based web application for browsing products with **search**, **paginatio
 ---
 
 ## **Features**
+
 - **Product Listing**:
   - View a paginated list of products.
   - Display **10 products per page**.
@@ -26,6 +27,7 @@ A React-based web application for browsing products with **search**, **paginatio
 ---
 
 ## **Technologies Used**
+
 - **React**: Frontend library for building user interfaces.
 - **Redux**: State management for managing application data.
 - **React Router**: Routing for navigation between pages.
@@ -37,33 +39,42 @@ A React-based web application for browsing products with **search**, **paginatio
 
 ## **Screenshots**
 
+![alt text](image.png)
+
 ### **Product Listing Page**
-![Product Listing Page](https://via.placeholder.com/800x400.png?text=Product+Listing+Page)
+
+![alt text](image-1.png)
 
 ### **Product Details Page**
-![Product Details Page](https://via.placeholder.com/800x400.png?text=Product+Details+Page)
+
+![alt text](image-2.png)
 
 ---
 
 ## **Setup Instructions**
 
 ### **Prerequisites**
+
 - **Node.js** (v16 or higher)
 - **npm** (v8 or higher)
 
 ### **Steps to Run the Project**
+
 1. **Clone the Repository**:
+
    ```bash
-   git clone https://github.com/your-username/product-listing-app.git
+   git clone https://github.com/mudit108/P9-REDUX-API-HUNTER-MUDIT
    cd product-listing-app
    ```
 
 2. **Install Dependencies**:
+
    ```bash
    npm install
    ```
 
 3. **Start the Development Server**:
+
    ```bash
    npm start
    ```
@@ -74,6 +85,7 @@ A React-based web application for browsing products with **search**, **paginatio
 ---
 
 ## **Project Structure**
+
 ```
 product-listing-app/
 ├── public/                  # Static assets
@@ -97,6 +109,7 @@ product-listing-app/
 ---
 
 ## **API Used**
+
 - **FakeStore API**:
   - Base URL: `https://fakestoreapi.com`
   - Endpoint: `/products`
@@ -108,16 +121,20 @@ product-listing-app/
 ---
 
 ## **How It Works**
+
 1. **Product Listing**:
+
    - The app fetches products from the FakeStore API.
    - Products are paginated, with **10 products per page**.
    - Users can navigate between pages using the pagination component.
 
 2. **Search**:
+
    - Users can search for products by title.
    - The search input is debounced to reduce unnecessary API calls.
 
 3. **Product Details**:
+
    - Clicking on a product navigates to its details page.
    - The details page displays the product's title, description, price, and image.
 
@@ -128,7 +145,9 @@ product-listing-app/
 ---
 
 ## **Customization**
+
 - To change the number of products per page, update the `productsPerPage` value in the `productSlice.js` file:
+
   ```javascript
   const initialState = {
     productsPerPage: 10, // Change this value
@@ -140,7 +159,9 @@ product-listing-app/
 ---
 
 ## **Contributing**
+
 Contributions are welcome! Follow these steps:
+
 1. Fork the repository.
 2. Create a new branch:
    ```bash
@@ -159,25 +180,20 @@ Contributions are welcome! Follow these steps:
 ---
 
 ## **License**
+
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ---
 
 ## **Contact**
+
 For questions or feedback, feel free to reach out:
-- **Email**: your-email@example.com
-- **GitHub**: [your-username](https://github.com/your-username)
+
+- **Email**: mudit@gmail.com
+- **GitHub**: mudit108(https://github.com/mudit108)
 
 ---
 
 Enjoy using the **Product Listing App**! 🚀
 
 ---
-
-### **How to Use This README**
-1. Replace `your-username` with your GitHub username.
-2. Replace `your-email@example.com` with your email address.
-3. Add actual screenshots of your app (replace the placeholder images).
-4. Update the API details if you are using a different API.
-
-Let me know if you need further assistance! 😊
